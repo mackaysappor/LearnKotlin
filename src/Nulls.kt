@@ -3,7 +3,7 @@
  * */
 fun main() {
     var name = "Jamila"
-    name = null
+    // name = null
 /* In kotlin the above is not possible because the kotlin type system is aimed
     at eliminating the dangers of null references
     */
