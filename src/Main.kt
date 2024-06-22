@@ -7,8 +7,10 @@ import kotlin.time.measureTime
 /**
  * VARIABLES
  * val and var are used to declare variables
- * val is for constants
- * Kotlin uses type inference to determine what data type the variable is using
+ * val is for read only variables or immutable variables(in java the equivalent is final)
+ * const is for constants; known values before execution (equivalent in java is static final)
+ * Kotlin uses type inference to determine what data type the variable is using so there's no need for
+ * explicitly adding the data type for variables
  */
 val name = "Mackay"
 var customers = 10
@@ -20,28 +22,14 @@ fun main(){
     var cost : Int // to declare a variable without initialization specify its type with ":"
 
     /**
-     * COLLECTIONS
-     *
-     * ~ Lists ~
-     * To create a read only list use listOf(); to create a mutable list use mutableListOf()
-     * List are ordered and allow duplicate items
-     * Casting refers to when a mutable list is made read only by assigning it to a read only list
-     *
-     * For example
-     * val shapes: MutableList<String> = mutableListOf("triangle", "square", "circle")
-     * val shapesLocked: List<String> = shapes
-     *
-     * .add() adds items to a list; .remove() removes items from a list
+     * Exercise - Variables
+     * Find the sum of two numbers
      */
 
-    val readOnlyShapes = listOf("Triangle", "Square", "Circle")
-    val mutableList: MutableList<String> = mutableListOf("Hexagon", "Pentagon", "Octagon")
-
-    println(mutableList)
-    mutableList.add("Rectangle")
-    println("Modified shape list: $mutableList")
-    println("First shape: ${mutableList.first()}") //retrieves first item in the list .last() is for the last item
-
+    val firstNumber = 4
+    val secondNumber = 5
+    val sum = firstNumber + secondNumber
+    println("The sum of $firstNumber and $secondNumber is $sum")
 }
 
 
